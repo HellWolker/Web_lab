@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Косарев Антон</title>
+	<link rel="stylesheet" href="jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="jquery-ui.js"></script>
+<script src="jquery.myPlugin.js"></script>
+	<style>
+		#kub1, #kub2 {
+			width: 70px;
+			height: 70px;
+			border-radius: 5px;
+			text-align: center;
+			font-size: 30px;
+			background-color: #b792cf;
+			margin-right: 30px;
+		}
+		#hod {
+			background-color: white;
+			border: 1px solid black;
+			border-radius: 5px;
+			padding: 10px;
+			font-size: medium;
+		}
+		.sch {
+			color: #552574;
+			font-size: 40px;
+		}
+		table, tr, td {
+			border: 1px solid #552574;
+			padding: 5px;
+			font-size:24px;
+		}
+		th {
+			padding: 6px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Лабораторная работа №5.</h1>
+	<a href="../index.php">Назад</a><br>
+		<h2>Бросание кубиков</h2>
+		<span class="sch"><h3>СЧЕТ: <span id="itogo2">0</span>:<span id="itogo1">0</span></h3></span>
+		<input type="text" id="kub1"> <input type="text" id="kub2">
+		<br><br>
+		<input type="button" value="Сходить" id="hod"><br><br>
+		<span id="schet"></span>
+		<table>
+			<tr>
+			 <th>Ваш ход</th>
+			 <th>Ход компьютера</th>
+			</tr>
+			<tr>
+			 <td id="td1"></td>
+			 <td id="td2"></td>
+		   </tr>
+		  </table>
+		<br>
+		<div id="start" title="Правила игры"><p>Определите кому больше везет: Вам или компьютеру? Нажимайте на "мой ход", ждите "бросание кубика"
+			, затем дожидайтесь результата компьютера, следите за светом и играйте до 6 побед! Удачи!!!</p></div>
+	<script>
+		$(function(){
+			$('#start').dialog({  width: 300, buttons:{
+        "Играть": function(){ $('#start').myPlugin('start'); $('#start').dialog('close')}}});
+		})
+		
+	
+	</script> 
+</body>
+</html>
